@@ -1,0 +1,5 @@
+\setlength{\parindent}{0pt}
+define hostgroup \{
+	\hspace{3em}hostgroup_name   \hspace*{3em} Veterinaria
+	\hspace{3em}alias				     \hspace*{6em} Veterinaria
+\hspace{3em}\}

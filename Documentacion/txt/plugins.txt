@@ -1,0 +1,15 @@
+\setlength{\parindent}{0pt}
+# Anteriormente descargamos el paquete nagios-plugins-2.2.1.tar.gz dirigirse a 
+# su ubicación para descomprimir el paquete ingresar:
+
+  tar xzf nagios-plugins-2.2.1.tar.gz
+  cd nagios-plugins-2.2.1
+  ./configure
+  make && make install
+
+# Una vez terminado, podemos comprobar si se han instalado correctamente en 
+# el directorio.
+# /usr/local/nagios/libexec/ mediante el comando:
+  
+  ls /usr/local/nagios/libexec
+

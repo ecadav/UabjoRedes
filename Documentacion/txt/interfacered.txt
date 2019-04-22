@@ -1,0 +1,25 @@
+\setlength{\parindent}{0pt}
+# Para acceder a la configuración de red, es necesario abrir el archivo de 
+# configuración de la interfaz de red del servidor 
+
+vim /etc/sysconfig/network-scripts/ifcfg-enp0
+
+# En la configuración es necesario definir una ip estática 
+
+TYPE=Ethernet
+BOOTPROTO=static
+DEFROUTE=yes
+IPV4_FAILURE_FATAL=no
+NAME=enp0
+ONBOOT=yes
+IPADDR0= 192.168.80.23
+NETMASK= 255.255.255.0
+GATEWAY= 192.168.80.1
+DNS1=172.16.16.5
+DNS2=172.16.16.4
+  
+# Ejecutar los siguientes comandos para actualizar los cambios 
+
+systemctl stop NetworkManager
+systemctl disable NetworkManager
+systemctl restart network.service

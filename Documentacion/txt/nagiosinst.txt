@@ -1,0 +1,47 @@
+\setlength{\parindent}{0pt}
+# Hay que dirigirse a la carpeta home donde se encuentran los archivos
+ 
+ cd /home
+
+# Ahora hay que descomprimir el archivo de instalación de Nagios Core
+
+  tar xzvf nagios-4.4.3.tar.gz
+
+# Dirigirse a la carpeta donde se descomprimió
+
+  cd nagios-4.4.3
+
+# Ejecutamos el archivo configure y compilamos el makefile
+
+ ./configure
+make all
+
+# Una vez compilado, se tendrá que instalar para ello ejecutamos:
+
+  make install 
+  make install-init
+  make install-commandmode
+  make install-config
+  meke install-webconfig
+
+# Sera necesario habilitar nagios en el sistema:
+
+ systemctl enable nagios
+
+
+ # También habilitar el servicio de apache
+
+  systemctl enable httpd
+
+# Ahora sera necesario crear un usuario y una contraseña para el sistema nagios
+
+  htpasswd -c /usr/local/nagios/etc/htpasswd.users nagiosadmin
+  password
+  re-password
+
+# Para verificar que el las configuraciones esten correctas:
+  systemctl status httpd
+  systemctl status nagios
+
+# En el navegador web introducir la ip del servidor diagonal nagios 
+# (xxxx.xxxx.xxxx.xxxx/nagios).

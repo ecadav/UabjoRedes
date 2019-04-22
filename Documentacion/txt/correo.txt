@@ -1,0 +1,28 @@
+
+# Instalacion de dependencias para notificaciones por correo
+
+# Instalacion del repositorio remi y los paquetes php
+yum install yum-utils http://rpms.remirepo.net/enterprise/remi-release-7.rpm
+yum-config-manager --enable remi-php70
+yum install php php-cli php-gd php-curl php-zip php-intl php-mbstring php-xml
+
+# Instalacion del composer de php
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+php composer-setup.php --install-dir=/usr/local/bin --filename=composer
+
+# Instalacion del cliente smtp 
+wget https://github.com/boolean-world/smtp-cli/archive/master.zip
+unzip -d /opt master.zip
+cd /opt/smtp-cli-master
+composer install
+
+# Crear el archivo config.json y colocar en el los datos de la cuenta de 
+# correo que enviara las notificaciones
+
+{
+ "host": "smtp.gmail.com",
+ "username": "the-senders-email@gmail.com",
+ "password": "the-password-of-the-account",
+ "secure": "tls",
+ "port": 587
+}

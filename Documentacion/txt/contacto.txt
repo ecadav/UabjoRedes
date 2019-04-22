@@ -1,0 +1,7 @@
+# Para definir un contacto:
+define contact\{
+contact_name nagiosadmin ;
+use generic-contact ;
+alias Nagios Admin ;
+email nagios@openmailbox.org ;
+\}

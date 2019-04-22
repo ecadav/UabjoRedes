@@ -1,0 +1,11 @@
+
+\setlength{\parindent}{0pt}
+\hspace{1em} define service\{
+	\hspace{3em}use										\hspace*{10em} generic-service
+	\hspace{3em}host_name							\hspace*{7em} Biblioteca
+	\hspace{3em}service_description		\hspace*{2em} PING
+	\hspace{3em}check_command					\hspace*{5em} check_ping!200.0,20%,!600.0,60%
+	\hspace{3em}check_interval				\hspace*{5em}5
+	\hspace{3em}retry_interval		    \hspace*{3em}2
+
+	\hspace{3em}\}

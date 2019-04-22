@@ -1,0 +1,30 @@
+\setlength{\parindent}{0pt}
+# Desactivar SELINUX que es un modulo con políticas de seguridad.
+# editar el siguiente archivo
+
+  vim /etc/selinux/config
+
+# Buscar la siguiente linea:
+
+  SELINUX = enforcing 
+
+# Remplazar por:
+
+  SELINUX = disable
+
+# Configurar puertos firewall para acceder al servidor a través de la web:
+  
+  firewall-cmd --permanent --add-port=80/tcp
+  firewall-cmd --permanent --add-port=443/tcp
+
+# Aplicar cambios
+  
+  firewall-cmd --reload
+
+# Para comprobar que fue exitosa la configuración:
+  
+  firewall-cmd --list-all
+
+# Si todo fue correcto reiniciar el servidor
+  
+  systemctl reboot

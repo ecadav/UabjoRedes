@@ -1,0 +1,13 @@
+    \setlength{\parindent}{0pt}
+    define host \{
+      use				generic-switch
+      host_name			biblioteca
+      alias 				ENTERASYS
+      address				192.168.3.254
+      hostgroups			Veterinaria
+      icon_image			switch40.gif
+      statusmap_image			switch40.gd2
+
+    \}
+
+

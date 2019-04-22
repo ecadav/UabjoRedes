@@ -1,0 +1,5 @@
+\setlength{\parindent}{0pt}
+# Descargar los siguientes paquetes en la ruta /home de preferencia
+ 
+wget -c https://assets.nagios.com/downloads/nagioscore/releases/nagios-4.4.3.tar.gz
+wget -c https://nagios-plugins.org/download/nagios-plugins-2.2.1.tar.gz

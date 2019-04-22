@@ -1,0 +1,15 @@
+\setlength{\parindent}{0pt}
+#Instalacion de paquetes de dependencias
+#1
+yum install -y gettext wget net-snmp-utils openssl-devel glibc-common unzip 
+perl epel-release gcc php gd automake autoconf httpd make glibc gd-devel
+net-snmp
+#2
+yum install perl-Net-SNMP
+# Por motivos de seguridad Nagios debe tener su propio usuario y grupo, por 
+# ello es necesario crearlos:
+  
+useradd nagios
+usermod -a -G nagios apache
+id nagios
+id apache

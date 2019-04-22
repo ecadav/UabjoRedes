@@ -1,0 +1,47 @@
+#######################################################define host###############################################
+define host{
+        use                   generic-switch
+        host_name             switch0301
+        alias                 switch0301
+        address               192.168.3.1
+        hostgroups            red03
+        icon_image            switch.gif
+        statusmap_image       switch.gd2
+}
+############################################################# Groups ##############################################
+define hostgroup{
+        hostgroup_name          red03
+        alias                   red03
+
+}
+
+
+
+########################################################### Services ###############################################
+
+define service{
+        use                     generic-service
+        host_name               switch0301
+        service_description     PING
+        check-command           check_ping!200.0,20%,!600.0,60%
+        check_interval          2
+        retry_interval          1
+}
+
+
+
+
+# ruta a la que se agregan los archivos de los switches
+  /usr/local/nagios/etc/objects
+  guardar con .cfg
+
+#ruta a donde se agregan los archivos de los archivos
+  /usr/local/nagios/etc/objects
+
+
+# Comprobar si no hay ningun error
+/usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg
+reiniciar nagios 
+systemctl restart nagios
+
+

@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>DRTI</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Content-Language" content="en" />
+	<meta name="robots" content="noindex, nofollow" />
+	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+	<link rel="stylesheet" href="stylesheets/interface/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/interface/style2.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/interface/jquery.mCustomScrollbar.min.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/interface/menu.css" />
+	<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="js/menu.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+    <!-- Sidebar Holder <p>Dummy Heading</p>-->
+    <nav id="sidebar">
+      <div class="sidebar-header">
+        <h3>SISTEMA DE MONITOREO NAGIOS CORE</h3>
+      </div>
+      <div id="menu">
+        <h2>Current Status</h2>
+        <ul>
+          <li class="menuli_style1"><a href="/nagios/cgi-bin/tac.cgi" target="main">Tactical Overview</a></li>
+          <li class="menuli_style2"><a href="/nagios/cgi-bin/status.cgi?hostgroup=all&amp;style=hostdetail" target="main">Hosts</a></li>
+          <li class="menuli_style1"><a href="/nagios/cgi-bin/status.cgi?host=all" target="main">Services</a></li>
+          <li class="menuli_style2"><a href="/nagios/cgi-bin/status.cgi?hostgroup=all&amp;style=overview" target="main">Host Groups</a></li>
+          <li class="menuli_style1"><a href="/nagios/cgi-bin/status.cgi?servicegroup=all&amp;style=overview" target="main">Service Groups</a></li>
+          <li class="menuli_style2"><a href="/nagios/cgi-bin/status.cgi?hostgroup=all&amp;style=hostdetail&amp;hoststatustypes=12" target="main">Host Problems</a></li>
+          <li class="menuli_style1"><a href="/nagios/cgi-bin/status.cgi?host=all&amp;servicestatustypes=28" target="main">Service Problems</a></li>
+          <li class="menuli_style2"><a href="/nagios/cgi-bin/statusmap.cgi?host=all" target="main" >Map</a></li>
+          <li class="menuli_style1"><a href="/nagios/cgi-bin/outages.cgi" target="main">Network Outages</a></li>
+        </ul>
+        <h2>Reports</h2>
+        <ul>
+          <li class="menuli_style1"><a href="/nagios/cgi-bin/avail.cgi" target="main">Availability</a></li>
+          <li class="menuli_style2"><a href="/nagios/trends.html" target="main">Trends</a></li>
+          <li class="menuli_style1"><a href="/nagios/cgi-bin/history.cgi?host=all" target="main">Alert History</a></li>
+          <li class="menuli_style2"><a href="/nagios/cgi-bin/summary.cgi" target="main">Alert Summary</a></li>
+          <li class="menuli_style1"><a href="/nagios/histogram.html" target="main">Alert Histogram</a> </li>
+          <li class="menuli_style2"><a href="/nagios/cgi-bin/notifications.cgi?contact=all" target="main">Notifications</a></li>
+          <li class="menuli_style1"><a href="/nagios/cgi-bin/showlog.cgi" target="main">Event Log</a></li>
+        </ul>
+        <h2>System</h2>
+        <ul>
+          <li class="menuli_style1"><a href="/nagios/cgi-bin/extinfo.cgi?type=3" target="main">Comments</a></li>
+          <li class="menuli_style2"><a href="/nagios/cgi-bin/extinfo.cgi?type=6" target="main">Downtime</a></li>
+          <li class="menuli_style1"><a href="/nagios/cgi-bin/extinfo.cgi?type=0" target="main">Process Info</a></li>
+          <li class="menuli_style2"><a href="/nagios/cgi-bin/extinfo.cgi?type=4" target="main">Performance Info</a></li>
+          <li class="menuli_style1"><a href="/nagios/cgi-bin/extinfo.cgi?type=7" target="main">Scheduling Queue</a></li>
+          <li class="menuli_style2"><a href="/nagios/cgi-bin/config.cgi" target="main">Configuration</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Page Content Holder -->
+    <div id="content">
+      <nav class="navbar navbar-default">
+          <div class="container-fluid">
+
+              <div class="navbar-header">
+                  <button type="button" id="sidebarCollapse" class="btn btn-primary navbar-btn">
+                      <i class="glyphicon glyphicon-align-left"></i>
+                      <span>Menu</span>
+                  </button>
+              </div>
+
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <div id="top_left" class= "main-logo">
+                  <img src="images/interface/xlogo.png" alt="Logo" />
+                </div>
+              </div>
+          </div>
+      </nav>
+      <iframe src="cgi-bin/tac.cgi"  name="main" scrolling="yes" width="100v " height="100vh"></iframe>
+      <div class="footer">
+      <div class="footer-copyright">
+          <p>© 2019 Copyright by <a href="https://github.com/ecadav">Ecadav Todos los derechos reservados. </a> <span class="copyright"> Universidad Autónoma Benito Juárez</span> </p>
+      </div>
+      </div>
+    </div>
+  </div>
+
+
+
+     <!--
+      <div class="container">
+        <div class="row">
+            <div class="col-sm-4 myCols">
+                <h4>SISTEMA DE MONITOREO</h4>
+                <h5>DE EQUIPOS DE RED</h5>
+
+            </div>
+            <div class="col-sm-4 myCols">
+                <h4>DRTI</h4>
+                <h5>Lic. FABIÁN ANGEL LAGUNAS REYES</h5>
+                <h6>JEFE DEL AREA DEL NOC</h6>
+
+            </div>
+            <div class="col-sm-4 myCols">
+                <h4>UABJO</h4>
+
+            </div>
+
+        </div>
+    </div>
+     -->
+
+
+
+ </body>
+<!-- jQuery CDN -->
+<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<!-- Bootstrap Js CDN -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- jQuery Custom Scroller CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#sidebar").mCustomScrollbar({
+            theme: "minimal"
+        });
+
+        $('#sidebarCollapse').on('click', function () {
+            $('#sidebar, #content').toggleClass('active');
+
+            $('.collapse.in').toggleClass('in');
+            $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+        });
+    });
+</script>
+</html>
